@@ -1,0 +1,17 @@
+#Series::-webkit-scrollbar {
+    display: none;
+  }
+
+@media (max-width: 1024px){
+  
+
+  #content{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #Series{
+    width:100vw;
+    border:none;
+    height: 100%;
+  }
+}

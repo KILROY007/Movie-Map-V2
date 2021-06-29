@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter, Switch,Route } from 'react-router-dom';
+import Movies from './Pages/Movies/Movies'
+import Series from './Pages/Series/Series'
+import Trending from './Pages/Trending/Trending'
+import Sidebar from './Components/Desktop/Sidebar/Sidebar'
+import { useMediaQuery } from 'react-responsive'
+import MobileDashboard from './Components/Mobile/MobileDashboard/MobileDashboard'
+import MobileNavbar from './Components/Mobile/MobileNavbar/MobileNavbar'
 function App() {
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+        {
+          isMobile ? <MobileNavbar/> : <Sidebar/> 
+        }
+        <Switch>
+          <Route path='/trending' extact>
+          {
+            isMobile && <MobileDashboard/>
+          }
+            <Trending/>
+          </Route>
+          <Route path='/movies' >
+            <Movies/>
+          </Route>
+          <Route path='/series'>
+            <Series/>
+          </Route>
+        </Switch>
+      
+    </BrowserRouter>
+  )
 }
 
 export default App;

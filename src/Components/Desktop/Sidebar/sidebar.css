@@ -1,0 +1,20 @@
+.classMenuList:hover{
+    border-left-width: 6px;
+    --tw-border-opacity: 1;
+    border-color: rgb(207,47,39, var(--tw-border-opacity));
+}
+
+
+#menuList{
+    background-color:#0b0c0e;
+    border-radius: 15px;
+}
+
+#menuTitle{
+    color:#9696a3;
+}
+
+
+
+
+
