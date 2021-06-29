@@ -18,7 +18,7 @@ const Movies = () =>{
     return (
         <>  
             <div className=" w-4/6   h-screen  overflow-y-auto " id="Movies">
-                <div className="grid grid-cols-5 mx-2 gap-x-4 gap-y-4 mb-6 mt-10" id="content">
+                <div className="grid grid-cols-5  gap-x-4 gap-y-4 mb-6 mt-10" id="content">
                     {
                         movies && movies.map((tms) =>
                             <ContentCard key={tms.id} id={tms.id} poster={tms.poster_path} title={tms.title || tms.name} rating={tms.vote_average} overview={tms.overview} mediaType={tms.media_type} />

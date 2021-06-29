@@ -6,7 +6,7 @@ import{BsFillStarFill} from 'react-icons/bs'
 import {BiChevronLeft,BiChevronRight} from 'react-icons/bi'
 const hidden ='hidden'
 const block ='block'
-const D = () => {
+const  MobileDashboard = () => {
     const [current,setCurrent]=useState(0)
     const [Dashboard,setDashboard]=useState([])
     let [overview,setOverview]=useState(hidden)
@@ -108,4 +108,4 @@ const D = () => {
     )
 }
 
-export default D
+export default MobileDashboard
