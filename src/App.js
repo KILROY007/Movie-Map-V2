@@ -14,14 +14,15 @@ function App() {
         {
           isMobile ? <MobileNavbar/> : <Sidebar/> 
         }
+        <Trending/>
         <Switch>
           <Route path='/trending' extact>
           {
             isMobile && <MobileDashboard/>
           }
-            <Trending/>
+            
           </Route>
-          <Route path='/movies' >
+          <Route path='/movies'>
             <Movies/>
           </Route>
           <Route path='/series'>
